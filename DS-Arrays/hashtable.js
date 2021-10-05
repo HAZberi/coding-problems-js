@@ -11,25 +11,40 @@ class HashTable {
     return hash;
   }
 
-  set(key, value){
-      this.data[this._hash(key)] = [key, value]
+  set(key, value) {
+    const address = this._hash(key);
+    if (!this.data[address]) {
+      this.data[address] = [];
+    }
+    this.data[address].push([key, value]);
+    return this.data;
   }
 
-  get(key){
-      return this.data[this._hash(key)][1];
+  get(key) {
+    const address = this._hash(key);
+    if (!this.data[address]) {
+      return;
+    }
+    for (let i = 0; i < this.data[address].length; i++) {
+      if (this.data[address][i][0] === key) {
+        return this.data[address][i][1];
+      }
+    }
   }
 
-  print(){
-      console.log(this.data);
+  print() {
+    console.log(this.data);
   }
 }
 
-const myHashTable = new HashTable(10);
+const myHashTable = new HashTable(40);
 
-myHashTable.print()
+myHashTable.print();
 
 myHashTable.set("grapes", 10000);
+myHashTable.set("pineapple", 40000);
 myHashTable.set("apples", 1000);
-console.log(myHashTable.get("apples"));
+console.log(myHashTable.get("pineapple"));
+console.log(myHashTable.get("grapes"));
 
-myHashTable.print()
+myHashTable.print();
