@@ -10,10 +10,7 @@ const playList = [
 
 const shuffleArray = (songs) => {
   //Check Input
-  if (!songs) {
-    console.log("No items to shuffle");
-    return;
-  }
+  if (!songs) return;
 
   for (let i = 0; i < songs.length; i++) {
     const j = Math.floor(Math.random() * songs.length);
@@ -27,6 +24,3 @@ const shuffleArray = (songs) => {
 
 console.log(shuffleArray(playList));
 
-// for (let i = 0; i < 100; i++) {
-//   console.log(Math.floor(Math.random() * 7));
-// }
