@@ -21,29 +21,40 @@ class LinkedList {
     this.tail = this.head;
     this.length = 1;
   }
-  append(value){
-      const newNode = {
-          value: value,
-          next: null,
-      }
-      this.tail.next = newNode;
-      this.tail = newNode;
-      this.length++;
+  append(value) {
+    //A new node can have its own class
+    const newNode = {
+      value: value,
+      next: null,
+    };
+    this.tail.next = newNode;
+    this.tail = newNode;
+    this.length++;
   }
-  prepend(value){
-      const newNode = {
-          value: value,
-          next: this.head,
-      }
-      this.head = newNode;
-      this.length++
+  prepend(value) {
+    //new node can be an instance of node class
+    const newNode = {
+      value: value,
+      next: this.head,
+    };
+    this.head = newNode;
+    this.length++;
+  }
+  printList() {
+    const arrayForLinkedList = [];
+    let currentNode = this.head;
+    while (currentNode !== null) {
+      arrayForLinkedList.push(currentNode.value);
+      currentNode = currentNode.next;
+    }
+    return arrayForLinkedList;
   }
 }
 
 const myLinkedList = new LinkedList(10);
 
-console.log(myLinkedList);
+console.log(myLinkedList.printList());
 myLinkedList.append(5);
 myLinkedList.append(16);
 myLinkedList.prepend(19);
-console.log(myLinkedList);
+console.log(myLinkedList.printList());
