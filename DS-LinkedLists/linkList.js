@@ -54,10 +54,10 @@ class LinkedList {
         next: null,
       };
       const preNode = this.traverseTo(index - 1);
-      const postNode = this.traverseTo(index);
-        preNode.next = newNode;
-        newNode.next = postNode;
-        this.length++;
+      const postNode = preNode.next;
+      preNode.next = newNode;
+      newNode.next = postNode;
+      this.length++;
       return this;
     }
   }
@@ -74,11 +74,9 @@ class LinkedList {
       this.length--;
     } else {
       const preDelNode = this.traverseTo(index - 1);
-      const postDelNode = this.traverseTo(index + 1);
-      if (preDelNode && postDelNode) {
-        preDelNode.next = postDelNode;
-        this.length--;
-      }
+      const nodeToDelete = preDelNode.next;
+      preDelNode.next = nodeToDelete.next;
+      this.length--;
     }
   }
 
