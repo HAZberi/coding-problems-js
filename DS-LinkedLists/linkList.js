@@ -55,12 +55,30 @@ class LinkedList {
       };
       const preNode = this.traverseTo(index - 1);
       const postNode = this.traverseTo(index);
-      if (preNode && postNode) {
         preNode.next = newNode;
         newNode.next = postNode;
         this.length++;
-      }
       return this;
+    }
+  }
+
+  remove(index) {
+    if (index >= this.length || index < 0) {
+      console.log(`No data found at Index: ${index} `);
+    } else if (index === 0) {
+      this.head = this.head.next;
+      this.length--;
+    } else if (index === this.length - 1) {
+      const preDelNode = this.traverseTo(index - 1);
+      preDelNode.next = null;
+      this.length--;
+    } else {
+      const preDelNode = this.traverseTo(index - 1);
+      const postDelNode = this.traverseTo(index + 1);
+      if (preDelNode && postDelNode) {
+        preDelNode.next = postDelNode;
+        this.length--;
+      }
     }
   }
 
@@ -97,4 +115,6 @@ myLinkedList.insert(3, 37);
 console.log(myLinkedList.printList());
 myLinkedList.insert(6, 57);
 myLinkedList.insert(0, 50);
+console.log(myLinkedList.printList());
+myLinkedList.remove(5);
 console.log(myLinkedList.printList());
