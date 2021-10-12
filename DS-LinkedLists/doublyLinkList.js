@@ -105,8 +105,9 @@
       } else {
         const preDelNode = this.traverseTo(index - 1);
         const nodeToDelete = preDelNode.next;
-        node
+        const postDelNode = nodeToDelete.next;
         preDelNode.next = nodeToDelete.next;
+        postDelNode.prev = postDelNode;
         this.length--;
       }
     }
@@ -137,15 +138,15 @@
   console.log(myLinkedList.printList());
   console.log(myLinkedList.append(5));
   myLinkedList.append(16);
-  //myLinkedList.append(100);
+  myLinkedList.append(100);
   console.log(myLinkedList.prepend(19));
   console.log(myLinkedList.printList());
   myLinkedList.insert(1, 60);
   myLinkedList.insert(3, 37);
   console.log(myLinkedList.printList());
-//   myLinkedList.insert(6, 57);
-//   myLinkedList.insert(0, 50);
-//   console.log(myLinkedList.printList());
-//   myLinkedList.remove(5);
-//   console.log(myLinkedList.printList());
+  myLinkedList.insert(6, 57);
+  myLinkedList.insert(0, 50);
+  console.log(myLinkedList.printList());
+  myLinkedList.remove(5);
+  console.log(myLinkedList.printList());
   
