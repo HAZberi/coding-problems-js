@@ -35,3 +35,13 @@ Binary Search Trees Rules:
     -Lookups, Insert and Delete are of logn complexity.
 
 Visual Playground: https://visualgo.net/en/bst
+
+Binary Search Trees Gotchas!
+    -If we keep adding the greatest value to BST we will end up with right-skewed tree
+    -If we keep adding the smallest value to BST we will end up with left-skewed tree
+    -In above mentioned worst case scinarios the BST will behave as a LinkedList
+    -BigO complexity is O(n) in worst case.
+    -Its not the fastest DS but it can provide an effecient solution in certain conditions or with 
+    some optimization. 
+    -Trees can never be optimized to provide O(1) like Hashtables which has insertion, deletion
+     and lookups at O(1).
