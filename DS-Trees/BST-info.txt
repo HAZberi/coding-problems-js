@@ -1,0 +1,19 @@
+Binary Search Trees Pointers!!
+
+- A node in the tree represents a value, a pointer to the left node and a pointer to the right node.
+class Node {
+    constructor(value){
+        this.value = value;
+        this.left = null;
+        this.right = null;
+    }
+}
+
+- BigO => log n
+
+Perfect Binary Tree:
+    A tree that doesnt have a parent with only one child. This tree has all the parents with 
+    either two or zero children.
+    Leaf nodes/Terminating nodes contain half + 1 of all the nodes in the tree. Thats why is 
+    super effecient to store data in a Perfect Binary Tree.
+    BigO is usually is a factor of log n. 
