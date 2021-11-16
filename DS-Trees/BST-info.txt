@@ -17,3 +17,13 @@ Perfect Binary Tree:
     Leaf nodes/Terminating nodes contain half + 1 of all the nodes in the tree. Thats why is 
     super effecient to store data in a Perfect Binary Tree.
     BigO is usually is a factor of log n. 
+
+    Calculation of Number of Node in a perfect binary tree.
+    Level0 = 2^0 = 1 ==> step 1
+    Level1 = 2^1 = 2 ==> step 2
+    Level2 = 2^2 = 4 ==> step 3
+    Level3 = 2^3 = 8 ==> step 4
+
+    Height of the tree = Total number of steps.
+
+    Number of Nodes = 2^*height of the tree* - 1;
