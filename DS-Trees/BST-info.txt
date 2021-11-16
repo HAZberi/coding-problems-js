@@ -27,3 +27,11 @@ Perfect Binary Tree:
     Height of the tree = Total number of steps.
 
     Number of Nodes = 2^*height of the tree* - 1;
+
+Binary Search Trees Rules:
+    -Each node in a BST can have up to 2 children nodes.
+    -Left node store the value that is LESS THAN the current node.
+    -Rigth node store the value that is MORE THAN the current node.
+    -Lookups, Insert and Delete are of logn complexity.
+
+Visual Playground: https://visualgo.net/en/bst
