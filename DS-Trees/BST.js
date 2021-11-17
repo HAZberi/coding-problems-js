@@ -18,23 +18,39 @@ class BinarySearchTree {
       let currentNode = this.root;
       while (true) {
         if (value < currentNode.value) {
-            if(!currentNode.left) {
-                currentNode.left = newNode;
-                break;
-            }
-            currentNode = currentNode.left;
+          if (!currentNode.left) {
+            currentNode.left = newNode;
+            break;
+          }
+          currentNode = currentNode.left;
         } else {
-            if(!currentNode.right) {
-                currentNode.right = newNode;
-                break;
-            }
-            currentNode = currentNode.right;
+          if (!currentNode.right) {
+            currentNode.right = newNode;
+            break;
+          }
+          currentNode = currentNode.right;
         }
       }
     }
     return JSON.stringify(this.root);
   }
-  lookup(value) {}
+  lookup(value) {
+    if (this.root === null) {
+      return false;
+    } else {
+      let currentNode = this.root;
+      while (currentNode) {
+        if (value < currentNode.value) {
+          currentNode = currentNode.left;
+        } else if (value > currentNode.value) {
+          currentNode = currentNode.right;
+        } else if (value === currentNode.value) {
+          return JSON.stringify(currentNode);
+        }
+      }
+    }
+    return false;
+  }
   remove() {}
 }
 
@@ -46,7 +62,14 @@ console.log(myBST.insert(1));
 console.log(myBST.insert(20));
 console.log(myBST.insert(15));
 console.log(myBST.insert(170));
-
+console.log(
+  "-----------------------------------------------------------------------------"
+);
+console.log(myBST.lookup(170));
+console.log(myBST.lookup(4));
+console.log(myBST.lookup(20));
+console.log(myBST.lookup(9));
+console.log(myBST.lookup(90));
 
 const traverse = (node) => {
   const tree = { value: node.value };
