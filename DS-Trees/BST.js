@@ -72,8 +72,12 @@ console.log(myBST.lookup(9));
 console.log(myBST.lookup(90));
 
 const traverse = (node) => {
+  //start with a simple node without pointers
   const tree = { value: node.value };
+  //set the pointer to left node 
   tree.left = node.left !== null ? traverse(node.left) : null;
+  //set the pointer to right node 
   tree.right = node.right !== null ? traverse(node.right) : null;
+  //reutrn the node once left and right pointers are found/returned
   return tree;
 };
