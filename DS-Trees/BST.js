@@ -85,12 +85,29 @@ class BinarySearchTree {
             }
           }
         } else {
-          if(parentNode === null){
-            this.root = currentNode.left;
-          } else {
-            
+            let leftmost = currentNode.right.left;
+            let leftmostParent = currentNode.right;
+
+            while(leftmost.left !== null){
+              leftmostParent = leftmost;
+              leftmost = leftmost.left;
+            }
+
+            leftmostParent.left = leftmost.right;
+            leftmost.right = currentNode.right;
+            leftmost.left = currentNode.left;
+
+            if(parentNode === null){
+              this.root = leftmost;
+            } else {
+              if(leftmost.value < parentNode.value){
+                parentNode.left = leftmost;
+              } else if(leftmost.value > parentNode.value){
+                parentNode.right = leftmost;
+              }
+            }
           }
-        }
+        return true;
       } else return false;
     }
   }
