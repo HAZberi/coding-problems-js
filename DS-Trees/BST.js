@@ -120,15 +120,26 @@ console.log(myBST.insert(6));
 console.log(myBST.insert(1));
 console.log(myBST.insert(20));
 console.log(myBST.insert(15));
-console.log(myBST.insert(170));
+console.log(myBST.insert(99));
+console.log(myBST.insert(17));
 console.log(
   "-----------------------------------------------------------------------------"
 );
-console.log(myBST.lookup(170));
-console.log(myBST.lookup(4));
-console.log(myBST.lookup(20));
-console.log(myBST.lookup(9));
-console.log(myBST.lookup(90));
+// console.log(myBST.lookup(170));
+// console.log(myBST.lookup(4));
+// console.log(myBST.lookup(20));
+// console.log(myBST.lookup(9));
+// console.log(myBST.lookup(90));
+
+console.log(
+  "-----------------------------------------------------------------------------"
+  );
+  
+  console.log(myBST.remove(9));
+  console.log(myBST.lookup(15));
+  console.log(myBST.remove(4));
+  console.log(myBST.lookup(15));
+
 
 const traverse = (node) => {
   //start with a simple node without pointers
