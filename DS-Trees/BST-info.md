@@ -8,20 +8,20 @@
 ## Perfect Binary Tree
 
 - A tree that doesnt have a parent with only one child. This tree has all the parents with
-either two or zero children.
+  either two or zero children.
 - Leaf nodes/Terminating nodes contain half + 1 of all the nodes in the tree. Thats why is
-super effecient to store data in a Perfect Binary Tree.
+  super effecient to store data in a Perfect Binary Tree.
 - BigO is usually is a factor of log n.
 
-    **Calculation of Number of Node in a perfect binary tree.**
-    Level0 = 2^0 = 1 ==> step 1
-    Level1 = 2^1 = 2 ==> step 2
-    Level2 = 2^2 = 4 ==> step 3
-    Level3 = 2^3 = 8 ==> step 4
+  **Calculation of Number of Node in a perfect binary tree.**
+  Level0 = 2^0 = 1 ==> step 1
+  Level1 = 2^1 = 2 ==> step 2
+  Level2 = 2^2 = 4 ==> step 3
+  Level3 = 2^3 = 8 ==> step 4
 
-    Height of the tree = Total number of steps.
+  Height of the tree = Total number of steps.
 
-    Number of Nodes = 2^*height of the tree* - 1;
+  Number of Nodes = 2^_height of the tree_ - 1;
 
 ## Binary Search Trees Rules:
 
@@ -30,7 +30,7 @@ super effecient to store data in a Perfect Binary Tree.
 - Rigth node store the value that is MORE THAN the current node.
 - Lookups, Insert and Delete are of logn complexity.
 
-[Visual Playground](https://visualgo.net/en/bst)
+[Head over to Visual Playground and cement your knowledge.](https://visualgo.net/en/bst)
 
 ## Binary Search Trees Gotchas!
 
