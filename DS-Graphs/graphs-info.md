@@ -36,3 +36,13 @@
 - Example: Node traversal can not complete a cycle.
 
 *Note: Graphs usually exist in a combination of types defined above.*
+
+## Graph Implementation Types
+
+*Note: Garphs can be implemented using objects or arrays or with a combination of both.*
+
+### Basic Edge List Implementation
+
+`const graph = [[0, 2], [2, 3], [2, 1] [1, 3]];` *unweighted implementation*
+
+### Basic Adjacent List Implementation
