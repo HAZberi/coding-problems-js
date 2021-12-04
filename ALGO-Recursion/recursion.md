@@ -37,6 +37,7 @@ _Note: To really cement the understanding of recursion implementation, checkout 
 - Every time you are using a tree or converting something into a tree, consider recursion.
 - Divided into a number of subproblems that are instances of the same problem.
 - Every instance of the subproblem is identical in nature.
-- The solution of subproblem can be combined to solve the problem at hand. 
+- The solution of subproblem can be combined to solve the problem at hand.
 - Recursion can be used in divide and conquer approaches.
 
+[Real world recursion examples & discussion on Stack Overflow][(https://stackoverflow.com/questions/105838/real-world-examples-of-recursion)]
