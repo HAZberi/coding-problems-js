@@ -1,7 +1,16 @@
 ## Binary Search Trees Pointers!!
 
 - A node in the tree represents a value, a pointer to the left node and a pointer to the right node.
-  `class Node { constructor(value){ this.value = value; this.left = null; this.right = null; } }`
+
+  ```js
+  class Node { 
+    constructor(value) { 
+      this.value = value; 
+      this.left = null; 
+      this.right = null; 
+    } 
+  }
+  ```
 
 - BigO => log n
 

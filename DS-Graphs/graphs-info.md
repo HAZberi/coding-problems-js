@@ -43,13 +43,40 @@ _Note: Garphs can be implemented using objects or arrays or with a combination o
 
 ### Basic Edge List Implementation
 
-`const graph = [[0, 2], [2, 3], [2, 1] [1, 3]];` _unweighted implementation_
+```js
+const graph = [[0, 2], [2, 3], [2, 1], [1, 3]];
+```
+
+_unweighted implementation_
 
 ### Basic Adjacent List Implementation
 
-`const graph = [[2], [2, 3], [0, 3, 1], [1, 2]]` _unweighted implementation_
+```js
+const graph = [[2], [2, 3], [0, 3, 1], [1, 2]];
+```
+
+_unweighted implementation_
 
 ### Basic Adjacency Matrix Implementation
 
-`const graph = [ [0, 0, 1, 0], [0, 0, 1, 1], [1, 1, 0, 1], [0, 1, 1, 0] ]` _unweighted implementation_
-`const graph = { 0: [0, 0, 1, 0], 1: [0, 0, 1, 1], 2: [1, 1, 0, 1], 3: [0, 1, 1, 0] }` _unweighted implementation_
+```js
+const graph = [
+  [0, 0, 1, 0],
+  [0, 0, 1, 1],
+  [1, 1, 0, 1],
+  [0, 1, 1, 0],
+];
+```
+
+_unweighted implementation_
+
+```js
+const graph = {
+  0: [0, 0, 1, 0],
+  1: [0, 0, 1, 1],
+  2: [1, 1, 0, 1],
+  3: [0, 1, 1, 0],
+};
+```
+
+_unweighted implementation_
