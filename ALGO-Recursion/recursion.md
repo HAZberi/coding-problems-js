@@ -40,4 +40,4 @@ _Note: To really cement the understanding of recursion implementation, checkout 
 - The solution of subproblem can be combined to solve the problem at hand.
 - Recursion can be used in divide and conquer approaches.
 
-[Real world recursion examples & discussion on Stack Overflow][(https://stackoverflow.com/questions/105838/real-world-examples-of-recursion)]
+[Real world recursion examples & discussion on Stack Overflow](https://stackoverflow.com/questions/105838/real-world-examples-of-recursion)
