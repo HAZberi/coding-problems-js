@@ -25,3 +25,18 @@ function inception() {
 3. Get closer & closer and return when needed. Usually have 2 return statements, one for the base case and one for the recursive case.
 
 _Note: To really cement the understanding of recursion implementation, checkout the example in recursion.js and debug the code in Chrome console or any other debugger of your choice._
+
+### More pointers on recursion
+
+- Anything you do with recursion CAN also be done with loops or iteratively.
+- With respect to developer community, recursion is a solid technique but it's usually not the best approach.
+- Recursion can make the code DRY and Readable but can possibily cause stack overflow and performance related issues.
+
+### When to use Recursion
+
+- Every time you are using a tree or converting something into a tree, consider recursion.
+- Divided into a number of subproblems that are instances of the same problem.
+- Every instance of the subproblem is identical in nature.
+- The solution of subproblem can be combined to solve the problem at hand. 
+- Recursion can be used in divide and conquer approaches.
+
