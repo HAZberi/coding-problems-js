@@ -14,3 +14,8 @@
 - Do a basic swap when current element is greater than the next element.(_Note: One of many techniques_)
 - Number of Passes = (Length of Array) - 1.
 - BigO = O(n^2) ===> Not efficent for average case.
+- [Animated Algo](https://www.youtube.com/watch?v=18OO361--1E&ab_channel=Codearchery)
+
+### Selection Sort
+
+- [Animated Algo](https://www.youtube.com/watch?v=R_f3PJtRqUQ&ab_channel=Codearchery)
