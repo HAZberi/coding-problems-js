@@ -1,4 +1,4 @@
-const array = [99, 44, 23, 45, 646, 67, 98, 34, 45, 45];
+const array = [99, 44, 23, 45, 646, 67, 98, 34, 45, -45];
 
 const selectionSort = (array) => {
   const length = array.length;
