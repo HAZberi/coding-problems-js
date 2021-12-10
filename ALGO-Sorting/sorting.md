@@ -19,9 +19,10 @@
 ### Selection Sort
 
 - For each pass select the lowest value.
-- Swap the lowest value with the current element.
+- Set the lowest value with the current element.
 - Start the inner loop with next element.
-- Compare with current lowest value and replace accordingly.
+- Update the lowest value if new lowest found in the inner loop.
+- Set the lowest value with next element.
 - Number of Passes = (Length of Array) - 1.
 - BigO = O(n^2) ===> Not efficient for average case.
 - [Animated Algo](https://www.youtube.com/watch?v=R_f3PJtRqUQ&ab_channel=Codearchery)
