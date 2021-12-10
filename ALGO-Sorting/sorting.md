@@ -18,11 +18,11 @@
 
 ### Selection Sort
 
-- For each pass select the lowest value.
-- Set the lowest value with the current element.
+- For each pass select the lowest value index.
+- Set the lowest value index with the current element.
 - Start the inner loop with next element.
-- Update the lowest value if new lowest found in the inner loop.
-- Set the lowest value with next element.
+- Update the lowest value index if new lowest found in the inner loop.
+- Swap current element in outer loop with lowest value. (_NOTE: Simple Swap Algo_)
 - Number of Passes = (Length of Array) - 1.
 - BigO = O(n^2) ===> Not efficient for average case.
 - [Animated Algo](https://www.youtube.com/watch?v=R_f3PJtRqUQ&ab_channel=Codearchery)
