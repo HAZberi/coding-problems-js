@@ -4,17 +4,17 @@ const selectionSort = (array) => {
   const length = array.length;
 
   for (let i = 0; i < length; i++) {
-    let lowestVal = array[i];
+    let lowestValueIndex = i;
 
     for (let j = i + 1; j < length; j++) {
-      if (lowestVal > array[j]) {
-        lowestVal = array[j];
+      if (array[lowestValueIndex] > array[j]) {
+        lowestValueIndex = j;
       }
     }
 
     const temp = array[i];
-    array[array.indexOf(lowestVal)] = temp;
-    array[i] = lowestVal;
+    array[i] = array[lowestValueIndex];
+    array[lowestValueIndex] = temp;
   }
 
   return array;
