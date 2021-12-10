@@ -10,8 +10,8 @@
 ### Bubble Sort
 
 - For each pass select the current element.
-- Start the inner loop with next element.(_Note: One of many techniques_) 
-- Do a basic swap when current element is greater than the next element.(_Note: One of many techniques_)
+- Start the inner loop with next element.
+- Do a basic swap when current element is greater than the next element.(_Note: Swapping Adjacent Elements Only_)
 - Number of Passes = (Length of Array) - 1.
 - BigO = O(n^2) ===> Not efficent for average case.
 - [Animated Algo](https://www.youtube.com/watch?v=18OO361--1E&ab_channel=Codearchery)
@@ -21,8 +21,12 @@
 - For each pass select the lowest value index.
 - Set the lowest value index with the current element.
 - Start the inner loop with next element.
-- Update the lowest value index if new lowest found in the inner loop.
+- Update the lowest value index if new lowest found in the inner loop. (_Note: Find the lowest in each Pass_)
 - Swap current element in outer loop with lowest value. (_NOTE: Simple Swap Algo_)
 - Number of Passes = (Length of Array) - 1.
 - BigO = O(n^2) ===> Not efficient for average case.
 - [Animated Algo](https://www.youtube.com/watch?v=R_f3PJtRqUQ&ab_channel=Codearchery)
+
+### Difference Between Selection Sort and Bubble Sort
+
+Bubble sort operates by repeatedly swapping the adjacent elements if they are in the wrong order while the selection sort sorts an array by repeatedly finding the minimum element from the unsorted part and placing that at the beginning of the array.
