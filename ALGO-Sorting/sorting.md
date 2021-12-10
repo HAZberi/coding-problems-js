@@ -9,7 +9,7 @@
 
 ### Bubble Sort
 
-- For each pass select the lowest value and assign to a key/index.
+- For each pass select the current element.
 - Start the inner loop with next element.(_Note: One of many techniques_) 
 - Do a basic swap when current element is greater than the next element.(_Note: One of many techniques_)
 - Number of Passes = (Length of Array) - 1.
@@ -18,4 +18,10 @@
 
 ### Selection Sort
 
+- For each pass select the lowest value.
+- Swap the lowest value with the current element.
+- Start the inner loop with next element.
+- Compare with current lowest value and replace accordingly.
+- Number of Passes = (Length of Array) - 1.
+- BigO = O(n^2) ===> Not efficient for average case.
 - [Animated Algo](https://www.youtube.com/watch?v=R_f3PJtRqUQ&ab_channel=Codearchery)
