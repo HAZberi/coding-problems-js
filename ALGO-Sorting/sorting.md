@@ -30,3 +30,14 @@
 ### Difference Between Selection Sort and Bubble Sort
 
 Bubble sort operates by repeatedly swapping the adjacent elements if they are in the wrong order while the selection sort sorts an array by repeatedly finding the minimum element from the unsorted part and placing that at the beginning of the array.
+
+### Insertion Sort
+
+- Pick the first element and compare it with the current element. If the current element is smaller than the first element, unshift current element.
+- Assume left side of the current index is sorted and right is unsorted.
+- Find the location on the left side of the current index where current element should be moved to keep left sorted. (_NOTE: Use inner loop to iterate left sorted part_)
+- Use splice array method for deleting and insertion at index. (_NOTE: Keeping track of index is important_)
+- Insertion Sort is better than Bubble and Selection sort because the best case complexity is O(n).
+- For a nearly sorted array insertion sort is the fasted and best.
+- BigO (Best Case) = O(n) | BigO (Worst Case) = O(n^2)
+- [Animated Algo](https://www.youtube.com/watch?v=uMqVuEEWJv4&ab_channel=Codearchery)
