@@ -38,6 +38,6 @@ Bubble sort operates by repeatedly swapping the adjacent elements if they are in
 - Find the location on the left side of the current index where current element should be moved to keep left sorted. (_NOTE: Use inner loop to iterate left sorted part_)
 - Use splice array method for deleting and insertion at index. (_NOTE: Keeping track of index is important_)
 - Insertion Sort is better than Bubble and Selection sort because the best case complexity is O(n).
-- For a nearly sorted array insertion sort is the fasted and best.
+- For a nearly sorted array insertion sort is efficient and considered best.
 - BigO (Best Case) = O(n) | BigO (Worst Case) = O(n^2)
 - [Animated Algo](https://www.youtube.com/watch?v=uMqVuEEWJv4&ab_channel=Codearchery)
