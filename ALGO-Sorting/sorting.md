@@ -41,3 +41,18 @@ Bubble sort operates by repeatedly swapping the adjacent elements if they are in
 - For a nearly sorted array insertion sort is efficient and considered best.
 - BigO (Best Case) = O(n) | BigO (Worst Case) = O(n^2)
 - [Animated Algo](https://www.youtube.com/watch?v=uMqVuEEWJv4&ab_channel=Codearchery)
+
+### Merge Sort
+
+- Merge sort implementation algo as follows:
+  - Base case: if array size is 1 then just return the array.
+  - split the array into two halves i.e. left, right
+  - Merge Function: takes two sub array and set left and right pointers. Compare the pointer values and add lesser value to the new array. Advance the pointers and keep adding lesser values until you reach end of any array(left or right). Copy the remaining elements of the unfinished array to the new array and return the return the array.
+  - Recursive case: return the Merge Function that merges left and right arrays. Or it can be said, return the Merge Function that calls merge sort function on left sub array and right sub array as the arguments.
+  ```js
+  merge(mergeSort(left), mergeSort(right))
+  ```
+- Merge sort use divide and conquer technique. So list is divided into halves recursive until one element and then merge individual list by maintaining the order.
+- Merge sort is a lot more efficient than Bubble and Selection sort but not necessary than insertion sort's best case.
+- BigO = n log n, but the space complexity is O(n) instead of O(1).
+- [Merge Sort Explaination](https://www.youtube.com/watch?v=1sdEchFsL0Y&ab_channel=AaronJack)
