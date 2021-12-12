@@ -15,8 +15,31 @@ const mergeSort = (array) => {
 };
 
 const merge = (left, right) => {
-  const sortedArray = [];
+  let sortedArray = [];
+  const sortedArrayLength = left.length + right.length;
   //combine left and right array to the sorted array
+  let leftPointer = 0;
+  let rightPointer = 0;
+  for (let i = 0; i < sortedArrayLength; i++) {
+    if (leftPointer !== left.length && rightPointer !== right.length) {
+      if (left[leftPointer] <= right[rightPointer]) {
+        sortedArray.push(left[leftPointer]);
+        leftPointer++;
+      } else {
+        sortedArray.push(right[rightPointer]);
+        rightPointer++;
+      }
+    } else {
+      break;
+    }
+  }
+
+  if (leftPointer === left.length) {
+    sortedArray = [...sortedArray, ...right.slice(rightPointer)];
+  }
+  if (rightPointer === right.length) {
+    sortedArray = [...sortedArray, ...left.slice(leftPointer)];
+  }
   return sortedArray;
 };
 
@@ -37,3 +60,7 @@ const lengthOfSubArray = (array) => {
 // const right = array.slice(subArrayLength, array.length);
 
 // console.log(left, right);
+
+// console.log(merge([0,3,9], [2,6]));
+
+console.log(mergeSort(array));
