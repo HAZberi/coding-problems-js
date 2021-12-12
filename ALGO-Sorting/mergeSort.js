@@ -1,4 +1,4 @@
-const array = [99, 44, 23, 45, 646, 67, 98, 34, 45, 45];
+const array = [99, 44, 23, 45, 646, 679, 98, 34, 45, 45, 87, 29];
 
 const mergeSort = (array) => {
   //Base Case
@@ -6,7 +6,7 @@ const mergeSort = (array) => {
 
   //Split the array into two halves
 
-  const subArrayLength = lengthOfSubArray(array);
+  const subArrayLength = Math.floor(array.length / 2);
 
   const left = array.slice(0, subArrayLength);
   const right = array.slice(subArrayLength, array.length);
@@ -36,31 +36,10 @@ const merge = (left, right) => {
 
   if (leftPointer === left.length) {
     sortedArray = [...sortedArray, ...right.slice(rightPointer)];
-  }
-  if (rightPointer === right.length) {
+  } else {
     sortedArray = [...sortedArray, ...left.slice(leftPointer)];
   }
   return sortedArray;
 };
-
-const lengthOfSubArray = (array) => {
-  let length = 0;
-  if (array.length % 2 === 0) {
-    length = array.length / 2;
-  } else {
-    length = Math.floor(array.length / 2);
-  }
-  return length;
-};
-
-// const subArrayLength = lengthOfSubArray(array);
-// console.log(subArrayLength);
-
-// const left = array.slice(0, subArrayLength);
-// const right = array.slice(subArrayLength, array.length);
-
-// console.log(left, right);
-
-// console.log(merge([0,3,9], [2,6]));
 
 console.log(mergeSort(array));
