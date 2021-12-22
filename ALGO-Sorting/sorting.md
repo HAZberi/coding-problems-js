@@ -56,3 +56,16 @@ Bubble sort operates by repeatedly swapping the adjacent elements if they are in
 - Merge sort is a lot more efficient than Bubble and Selection sort but not necessary than insertion sort's best case.
 - BigO = n log n, but the space complexity is O(n) instead of O(1).
 - [Merge Sort Explaination](https://www.youtube.com/watch?v=1sdEchFsL0Y&ab_channel=AaronJack)
+
+### Quick Sort
+
+- Quick sort can be implemented in a variety of ways but the main idea is to select the pivot and find its correct location in the sorted array. 
+- Quick sort implementation algo as follows:
+  - Pick a random pivot.
+  - Move the pivot at the end of the array. Swap positions.
+  - Starting looking the array from first element. Wherever element is greater than the pivot, move the element on the right of the pivot. The element residing at the left of the pivot will take place of the element in comparision, and the pivot will take its place. (So pivot will basically move left).
+  - Once all the elements on the left of the pivot are smaller than the pivot itself. We store the pivot in the new array exactly at the same index.
+  - Then we divide the array into left and right and repeat the process.
+- BigO = (n (log n)) in best and average cases, however in worst case its (n^2) which can happen if the pivot is smallest or the largest.
+- Space Complexity of Quick Sort is O(n (log n)), better than merge sort.
+- [Quick Sort Visual Explanation / Alternate Approach](https://www.youtube.com/watch?v=Hoixgm4-P4M&ab_channel=MichaelSambol) 
