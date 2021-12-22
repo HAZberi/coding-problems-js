@@ -26,7 +26,7 @@ const partition = (array, pivot, itemFromLeft, itemFromRight) => {
     let partitionIndex = itemFromLeft;
     //Start from left item and increment till right item crosses left item
     for(let i = itemFromLeft; i < itemFromRight; i++){
-        if(array[i] <= pivotValue){
+        if(array[i] < pivotValue){
             const temp = array[i];
             array[i] = array[partitionIndex];
             array[partitionIndex] = temp;

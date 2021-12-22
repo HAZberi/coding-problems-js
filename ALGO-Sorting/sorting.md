@@ -62,9 +62,10 @@ Bubble sort operates by repeatedly swapping the adjacent elements if they are in
 - Quick sort can be implemented in a variety of ways but the main idea is to select the pivot and find its correct location in the sorted array. 
 - Quick sort implementation algo as follows:
   - Pick a random pivot.
-  - Move the pivot at the end of the array. Swap positions.
-  - Starting looking the array from first element. Wherever element is greater than the pivot, move the element on the right of the pivot. The element residing at the left of the pivot will take place of the element in comparision, and the pivot will take its place. (So pivot will basically move left).
-  - Once all the elements on the left of the pivot are smaller than the pivot itself. We store the pivot in the new array exactly at the same index.
+  - Move the pivot at the end of the array.
+  - Identify the correct index for the pivot. Assume the correct index as the start of the array.
+  - Starting looking the array from first element. Wherever element is less than the pivot, swap the element with elemenet at correct index. Then increment correct index.
+  - Once all the comparisons are complete, swap the element at the end of the array with correct index and return the correct index.
   - Then we divide the array into left and right and repeat the process.
 - BigO = (n (log n)) in best and average cases, however in worst case its (n^2) which can happen if the pivot is smallest or the largest.
 - Space Complexity of Quick Sort is O(n (log n)), better than merge sort.
