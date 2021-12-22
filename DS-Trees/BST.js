@@ -151,3 +151,5 @@ const traverse = (node) => {
   //reutrn the node once left and right pointers are found/returned
   return tree;
 };
+
+module.exports = new BinarySearchTree();
