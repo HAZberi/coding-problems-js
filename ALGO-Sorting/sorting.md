@@ -70,3 +70,8 @@ Bubble sort operates by repeatedly swapping the adjacent elements if they are in
 - BigO = (n (log n)) in best and average cases, however in worst case its (n^2) which can happen if the pivot is smallest or the largest.
 - Space Complexity of Quick Sort is O(n (log n)), better than merge sort.
 - [Quick Sort Visual Explanation / Alternate Approach](https://www.youtube.com/watch?v=Hoixgm4-P4M&ab_channel=MichaelSambol) 
+
+### Heap Sort 
+
+- Heap sort is basically is an ordered binary tree. 
+- [Heap Sort Explanation](https://www.youtube.com/watch?v=2DmK_H7IdTo&ab_channel=MichaelSambol)
