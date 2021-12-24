@@ -76,3 +76,14 @@ Bubble sort operates by repeatedly swapping the adjacent elements if they are in
 - In Heap sort, heap is basically is an ordered binary tree and max heap is where the parent is greater than child.
 - The most direct competitor of quicksort is heapsort. Heapsort is typically somewhat slower than quicksort, but the worst-case running time is always Θ(nlogn). Quicksort is usually faster, though there remains the chance of worst case performance except in the introsort variant, which switches to heapsort when a bad case is detected. If it is known in advance that heapsort is going to be necessary, using it directly will be faster than waiting for introsort to switch to it. 
 - [Heap Sort Explanation](https://www.youtube.com/watch?v=2DmK_H7IdTo&ab_channel=MichaelSambol)
+
+### Can we beat O(n log n)?
+
+- Sorting requires comparisions to be made, whether using nested loop or divide n counquer techniques.
+- So, Its mathmatically impossible to beat O(n log n). 
+- Although there are *Non-comaprison sorting* algorithims. The most popular ones are as follows:
+  - Counting Sort
+  - Radix Sort
+  - Bucket Sort
+- Counting Sort and Radix sort are only useful for fixed length intergers. If that's the case, then its possible to beat O(n log n).
+- So if there are numbers in a fixed range then *Non-comaprsion sorts* might be faster. 
