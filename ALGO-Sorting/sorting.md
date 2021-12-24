@@ -73,5 +73,6 @@ Bubble sort operates by repeatedly swapping the adjacent elements if they are in
 
 ### Heap Sort 
 
-- Heap sort is basically is an ordered binary tree. 
+- In Heap sort, heap is basically is an ordered binary tree and max heap is where the parent is greater than child.
+- The most direct competitor of quicksort is heapsort. Heapsort is typically somewhat slower than quicksort, but the worst-case running time is always Θ(nlogn). Quicksort is usually faster, though there remains the chance of worst case performance except in the introsort variant, which switches to heapsort when a bad case is detected. If it is known in advance that heapsort is going to be necessary, using it directly will be faster than waiting for introsort to switch to it. 
 - [Heap Sort Explanation](https://www.youtube.com/watch?v=2DmK_H7IdTo&ab_channel=MichaelSambol)
