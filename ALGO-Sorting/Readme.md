@@ -90,29 +90,29 @@ Bubble sort operates by repeatedly swapping the adjacent elements if they are in
 
 ### How to think about sorting when solving a real life problem
 
-- ##### Sort 10 schools around your house by distance.
+- #### Sort 10 schools around your house by distance.
   Insertion Sort
     - For a small data set, insertion sort is a good option. Its easier to code and the space complexity is O(1).
-- ##### eBay sorts listing by current Bid amount.
+- #### eBay sorts listing by current Bid amount.
   Radix or Counting Sort
     - Current bid amount is usually in a fixed range of integers like ($1 - $100). So in such cases Radix or Counting Sort provide best Time and Space Complexity.
-- ##### Sport scores on ESPN.
+- #### Sport scores on ESPN.
   Quick Sort
     - There are a variety of formats and different types of scoring mechanisms, so quick sort is a good option. Provides better space complexity than other algos. 
-- ##### Massive database (can't fit all into memory) needs to sort through past year's user data.
+- #### Massive database (can't fit all into memory) needs to sort through past year's user data.
   Merge Sort
     - Lots of data, so data might be skewed. We dont have to worry about space in this case because sorting will take place externally(on external machine) anyways.
-- ##### Almost sorted Udemy review data needs to update and add 2 new reviews.
+- #### Almost sorted Udemy review data needs to update and add 2 new reviews.
   Insertion Sort 
     - For any pre-sorted lists, Insertion sort is usually preferred with best case O(n)-Time and O(1)-Space 
-- ##### Temperature records for the past 50 years in Canada.
+- #### Temperature records for the past 50 years in Canada.
   Quick Sort OR Radix/Counting Sort 
     - If the temperatures are only integers like -32 to 40. Then Radix and Counting Sort is good.
     - if temperatures are in decimals than Quick sort would be a better option.
-- ##### Large user name database needs to be sorted. Data is very random.
+- #### Large user name database needs to be sorted. Data is very random.
   Merge Sort / Quick Sort
     - If space is not the issue then merge sort is a better option. 
     - If space is limited and its possible to pick a better pivot, quick sort can also be helpful. 
-- ##### You want to teach sorting for the first time
+- #### You want to teach sorting for the first time
   Bubble Sort and Selection Sort. 
     - Easier implementation for beginners.
