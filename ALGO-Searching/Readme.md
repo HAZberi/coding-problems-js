@@ -23,3 +23,10 @@
 - Its very easy to find information if data is properly organized. The opposite is true for random data.
 - The Time Complexity of Binary Search = O(logn).
 - Code Example: Checkout the lookup(value) method in this repository @ /DS-Trees/BST.js
+
+### Graph + Tree Traversals
+
+- Traversals are required when we need to update each and evert node in a tree or graph.
+- So why one might not just use array and list to store data for traversal? Because we will not O(logn) when searching.
+- What about Hashtables? Accessiblity is O(1) but data is not sorted and address locations are random. Not optimal for traversals.
+- For Graph + Tree Traversals Breadth First OR Depth First are used in practice. 
