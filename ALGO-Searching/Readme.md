@@ -30,3 +30,8 @@
 - So why one might not just use array and list to store data for traversal? Because we will not O(logn) when searching.
 - What about Hashtables? Accessiblity is O(1) but data is not sorted and address locations are random. Not optimal for traversals.
 - For Graph + Tree Traversals Breadth First OR Depth First are used in practice. 
+
+### Breadth First Search (BFS)
+
+- In BFS, start from the root node and then move left to the right node in the second level, then move left to right node accross the third level and so on and so forth. 
+
