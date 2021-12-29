@@ -69,15 +69,40 @@ const depthFirstInAList = [9, 4, 1, 6, 20, 15, 170];
 - DFS can get really slow if the tree size is large. Not efficient to provide shortest path.
 - [What is the time and space complexity of a breadth first and depth first tree traversal?](https://stackoverflow.com/questions/9844193/what-is-the-time-and-space-complexity-of-a-breadth-first-and-depth-first-tree-tr)
 - Real Life Situations
-    * If you know the solution is not far from the root of the tree.
-        - BFS
-    * If the tree is very deep and solutions are rare. 
-        - BFS (DFS will be very very slow)
-    * If the tree is very wide.
-        - DFS (counter intutive approach - BFS will use a lot of memory)
-    * If solutions are frequent but are located very deep in the tree.
-        - DFS 
-    * Determinig whether a path exist between the two nodes.
-        - DFS
-    * Finding the shortest path.
-        - BFS
+  - If you know the solution is not far from the root of the tree.
+    - BFS
+  - If the tree is very deep and solutions are rare.
+    - BFS (DFS will be very very slow)
+  - If the tree is very wide.
+    - DFS (counter intutive approach - BFS will use a lot of memory)
+  - If solutions are frequent but are located very deep in the tree.
+    - DFS
+  - Determinig whether a path exist between the two nodes.
+    - DFS
+  - Finding the shortest path.
+    - BFS
+
+### Depth First Search Different Implementations
+
+```js
+//Our Balanced Binary Tree
+//          9
+//   4              20
+//1     6       15      170
+```
+
+- Inorder
+  - Returns a list by visiting the lowest values first. Assuming a binary search tree. 
+  ```js
+  const inorderDFS = [1, 4, 6, 9, 15, 20, 170];
+  ```
+- Pre-order
+  - Returns a list by traversing the depth of the tree.
+  ```js
+  const preorderDFS = [1, 4, 6, 9, 15, 20, 170];
+  ```
+- Post-order
+    - Returns a list by visiting children before parent. Left child first and then right child. 
+  ```js
+  const postorderDFS = [1, 6, 4, 15, 170, 20, 9];
+  ```
