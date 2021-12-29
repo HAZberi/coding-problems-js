@@ -74,39 +74,39 @@ class BinarySearchTree {
             }
           }
         } else if (currentNode.right.left === null) {
-          if(parentNode === null){
+          if (parentNode === null) {
             this.root = currentNode.left;
           } else {
             currentNode.right.left = currentNode.left;
-            if(currentNode.value < parentNode.value) {
+            if (currentNode.value < parentNode.value) {
               parentNode.left = currentNode.right;
-            } else if (currentNode.value > parentNode.value){
+            } else if (currentNode.value > parentNode.value) {
               parentNode.right = currentNode.right;
             }
           }
         } else {
-            let leftmost = currentNode.right.left;
-            let leftmostParent = currentNode.right;
+          let leftmost = currentNode.right.left;
+          let leftmostParent = currentNode.right;
 
-            while(leftmost.left !== null){
-              leftmostParent = leftmost;
-              leftmost = leftmost.left;
-            }
+          while (leftmost.left !== null) {
+            leftmostParent = leftmost;
+            leftmost = leftmost.left;
+          }
 
-            leftmostParent.left = leftmost.right;
-            leftmost.right = currentNode.right;
-            leftmost.left = currentNode.left;
+          leftmostParent.left = leftmost.right;
+          leftmost.right = currentNode.right;
+          leftmost.left = currentNode.left;
 
-            if(parentNode === null){
-              this.root = leftmost;
-            } else {
-              if(leftmost.value < parentNode.value){
-                parentNode.left = leftmost;
-              } else if(leftmost.value > parentNode.value){
-                parentNode.right = leftmost;
-              }
+          if (parentNode === null) {
+            this.root = leftmost;
+          } else {
+            if (leftmost.value < parentNode.value) {
+              parentNode.left = leftmost;
+            } else if (leftmost.value > parentNode.value) {
+              parentNode.right = leftmost;
             }
           }
+        }
         return true;
       } else return false;
     }
@@ -134,12 +134,11 @@ class BinarySearchTree {
 // console.log(
 //   "-----------------------------------------------------------------------------"
 //   );
-  
+
 //   console.log(myBST.remove(9));
 //   console.log(myBST.lookup(15));
 //   console.log(myBST.remove(4));
 //   console.log(myBST.lookup(15));
-
 
 const traverse = (node) => {
   //start with a simple node without pointers
@@ -152,4 +151,8 @@ const traverse = (node) => {
   return tree;
 };
 
-module.exports = new BinarySearchTree();
+//module.exports = BinarySearchTree;
+module.exports = {
+  BinaryTree: new BinarySearchTree(),
+  BinarySearchTree: BinarySearchTree,
+};

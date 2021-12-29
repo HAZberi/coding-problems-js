@@ -1,14 +1,14 @@
-const BinarySearchTree = require("./BST.js");
+const { BinaryTree } = require("./BST.js");
 
 //Populating the tree
-console.log(BinarySearchTree.insert(9));
-console.log(BinarySearchTree.insert(4));
-console.log(BinarySearchTree.insert(6));
-console.log(BinarySearchTree.insert(1));
-console.log(BinarySearchTree.insert(20));
-console.log(BinarySearchTree.insert(15));
-console.log(BinarySearchTree.insert(99));
-console.log(BinarySearchTree.insert(17));
+console.log(BinaryTree.insert(9));
+console.log(BinaryTree.insert(4));
+console.log(BinaryTree.insert(6));
+console.log(BinaryTree.insert(1));
+console.log(BinaryTree.insert(20));
+console.log(BinaryTree.insert(15));
+console.log(BinaryTree.insert(99));
+console.log(BinaryTree.insert(17));
 console.log(
   "-----------------------------------------------------------------------------"
 );
@@ -21,4 +21,4 @@ const sumOfAllNodes = (node) => {
   return sumOfAllNodes(node.left) + node.value + sumOfAllNodes(node.right);
 };
 
-console.log(sumOfAllNodes(BinarySearchTree.root));
+console.log(sumOfAllNodes(BinaryTree.root));
