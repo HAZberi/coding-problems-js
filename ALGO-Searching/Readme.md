@@ -68,3 +68,16 @@ const depthFirstInAList = [9, 4, 1, 6, 20, 15, 170];
 - DFS provides the answer if a path does exist to a node?
 - DFS can get really slow if the tree size is large. Not efficient to provide shortest path.
 - [What is the time and space complexity of a breadth first and depth first tree traversal?](https://stackoverflow.com/questions/9844193/what-is-the-time-and-space-complexity-of-a-breadth-first-and-depth-first-tree-tr)
+- Real Life Situations
+    * If you know the solution is not far from the root of the tree.
+        - BFS
+    * If the tree is very deep and solutions are rare. 
+        - BFS (DFS will be very very slow)
+    * If the tree is very wide.
+        - DFS (counter intutive approach - BFS will use a lot of memory)
+    * If solutions are frequent but are located very deep in the tree.
+        - DFS 
+    * Determinig whether a path exist between the two nodes.
+        - DFS
+    * Finding the shortest path.
+        - BFS
