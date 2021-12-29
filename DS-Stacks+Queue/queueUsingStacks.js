@@ -1,3 +1,8 @@
+//last or back stack    //first or front stack
+//3                     //1
+//2                     //2
+//1                     //3
+
 class Queue {
   constructor() {
     this.first = [];
