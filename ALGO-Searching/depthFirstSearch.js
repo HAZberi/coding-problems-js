@@ -13,6 +13,7 @@ BinaryTree.insert(170);
 // console.log(BinaryTree.lookup(20));
 
 const inorderDepthFirstSearch = (node, list = []) => {
+  if (node === null) return list;
   if (node.left) {
     inorderDepthFirstSearch(node.left, list);
   }
@@ -24,6 +25,7 @@ const inorderDepthFirstSearch = (node, list = []) => {
 };
 
 const preorderDepthFirstSearch = (node, list = []) => {
+  if (node === null) return list;
   list.push(node.value);
   if (node.left) {
     preorderDepthFirstSearch(node.left, list);
@@ -35,6 +37,7 @@ const preorderDepthFirstSearch = (node, list = []) => {
 };
 
 const postorderDepthFirstSearch = (node, list = []) => {
+  if (node === null) return list;
   if (node.left) {
     postorderDepthFirstSearch(node.left, list);
   }
@@ -53,4 +56,3 @@ console.log(postorderDepthFirstSearch(BinaryTree.root));
 //3     //1
 //2     //2
 //1     //3
-
