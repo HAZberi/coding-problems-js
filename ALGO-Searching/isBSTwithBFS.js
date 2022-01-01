@@ -1,4 +1,4 @@
-const { BinaryTree } = require("./BST");
+const { BinaryTree } = require("../DS-Trees/BST");
 
 //Insert test values in a Binary Tree
 
