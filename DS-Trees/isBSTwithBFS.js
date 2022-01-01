@@ -17,6 +17,7 @@ BinaryTree.insert(170);
 //1     6       15      170
 
 //Ineffective approch - But according to the course recommendation. 
+//Attempt based on Breadth First Search. Doesn't seem to solve the problem.
 const validateBST = (node) => {
   //output will true or false
   let queue = [];
