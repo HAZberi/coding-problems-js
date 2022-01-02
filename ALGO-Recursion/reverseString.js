@@ -11,7 +11,7 @@ console.log(reverseStringIterative("Yoyo Honey Singh's civic"));
 const reverseStringRecursive = (string) => {
 
   //Base Case  
-  if (string.length === 1) return string[0];
+  if (string.length < 2) return string;
 
   //Recursive Case
   const char = string[string.length - 1];
@@ -19,4 +19,4 @@ const reverseStringRecursive = (string) => {
   return  `${char}${reverseStringRecursive(string)}`;
 };
 
-console.log(reverseStringRecursive("Badshah's civic lambo"));
+console.log(reverseStringRecursive("civic"));
