@@ -23,10 +23,10 @@
 - BigO is usually is a factor of log n.
 
   **Calculation of Number of Node in a perfect binary tree.**
-  Level0 = 2^0 = 1 ==> step 1
-  Level1 = 2^1 = 2 ==> step 2
-  Level2 = 2^2 = 4 ==> step 3
-  Level3 = 2^3 = 8 ==> step 4
+  Level1 = 2^0 = 1 ==> step 1
+  Level2 = 2^1 = 2 ==> step 2
+  Level3 = 2^2 = 4 ==> step 3
+  Level4 = 2^3 = 8 ==> step 4
 
   Height of the tree = Total number of steps.
 
