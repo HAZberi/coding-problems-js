@@ -1,4 +1,4 @@
-## Searching Data
+## Searching Data And Validation Algorithms
 
 ### Types of Searching and Traversals
 
