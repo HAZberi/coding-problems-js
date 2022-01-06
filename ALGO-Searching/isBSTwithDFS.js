@@ -29,19 +29,12 @@ const isSorted = (list) => {
 
 
 
-//Inefficient approach and incomplete
+//Best and the most efficient method of Validating a BST ====> LEETCODE 98 certified. 
 const isBSTSol = (node, min = null, max = null) => {
   if (node === null) return true;
-  console.log(node.value, min, max);
-  if (min !== null && node.value > min) return false;
+  if (min !== null && node.value <= min) return false; //Hint: Checks right subtree
 
-  if (max !== null && node.value <= max) return false;
-
-  if (
-    (node.left && node.left.value > node.value) ||
-    (node.right && node.right.value <= node.value)
-  )
-    return false;
+  if (max !== null && node.value >= max) return false; //Hint: Checks left subtree
 
   if (
     !isBSTSol(node.left, min, node.value) ||
@@ -52,9 +45,7 @@ const isBSTSol = (node, min = null, max = null) => {
   return true;
 };
 
-const tree = createThreeLevelBinaryTree([9, 4, 20, 2, 8, 17, 30]);
-
-// const 
+const tree = createThreeLevelBinaryTree([9, 2, 20, 2, 8, 9, 30]);
 
 console.log(isBST(tree));
 
