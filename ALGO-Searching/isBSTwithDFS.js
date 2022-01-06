@@ -1,6 +1,7 @@
-const createThreeLevelBinaryTree = require('./utils/threeLevelBinaryTree'); 
+const createThreeLevelBinaryTree = require("./utils/threeLevelBinaryTree");
 
-const isBST = (root) => { //works only for lesser and greater values.
+const isBST = (root) => {
+  //works only for lesser and greater values.
   const list = inorderTraversal(root);
   return isSorted(list);
 };
@@ -26,6 +27,35 @@ const isSorted = (list) => {
   return true;
 };
 
-const tree = createThreeLevelBinaryTree([9, 4, 20, 2, 8, 19, 30]);
+
+
+//Inefficient approach and incomplete
+const isBSTSol = (node, min = null, max = null) => {
+  if (node === null) return true;
+  console.log(node.value, min, max);
+  if (min !== null && node.value > min) return false;
+
+  if (max !== null && node.value <= max) return false;
+
+  if (
+    (node.left && node.left.value > node.value) ||
+    (node.right && node.right.value <= node.value)
+  )
+    return false;
+
+  if (
+    !isBSTSol(node.left, min, node.value) ||
+    !isBSTSol(node.right, node.value, max)
+  )
+    return false;
+
+  return true;
+};
+
+const tree = createThreeLevelBinaryTree([9, 4, 20, 2, 8, 17, 30]);
+
+// const 
 
 console.log(isBST(tree));
+
+console.log(isBSTSol(tree));

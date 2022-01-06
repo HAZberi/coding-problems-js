@@ -13,8 +13,8 @@ const createThreeLevelBinaryTree = (arr) => {
   tree.right = arr[2] ? new Node(arr[2]) : null;
   tree.left.left = arr[3] ? new Node(arr[3]) : null;
   tree.left.right = arr[4] ? new Node(arr[4]) : null;
-//   tree.right?.left = arr[5] ? new Node(arr[5]) : null;
-//   tree.right?.right = arr[6] ? new Node(arr[6]) : null;
+  tree.right.left = arr[5] ? new Node(arr[5]) : null;
+  tree.right.right = arr[6] ? new Node(arr[6]) : null;
   return tree;
 };
 
