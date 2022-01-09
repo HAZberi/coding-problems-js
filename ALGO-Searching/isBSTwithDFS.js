@@ -1,7 +1,7 @@
 const createThreeLevelBinaryTree = require("./utils/threeLevelBinaryTree");
 
 const isBST = (root) => {
-  //works only for lesser and greater values.
+  //works for unique values.
   const list = inorderTraversal(root);
   return isSorted(list);
 };
@@ -30,6 +30,7 @@ const isSorted = (list) => {
 
 
 //Best and the most efficient method of Validating a BST ====> LEETCODE 98 certified. 
+//works for only unique values.
 const isBSTSol = (node, min = null, max = null) => {
   if (node === null) return true;
   if (min !== null && node.value <= min) return false; //Hint: Checks right subtree
@@ -45,8 +46,22 @@ const isBSTSol = (node, min = null, max = null) => {
   return true;
 };
 
-const tree = createThreeLevelBinaryTree([9, 2, 20, 2, 8, 9, 30]);
+//Valid BST
+//          9
+//   4              20
+//1     6       15      170
+
+//Invalid BST
+//          9
+//   4              20
+//1     6       8      170
+
+
+const tree = createThreeLevelBinaryTree([9, 4, 20, 1, 6, 15, 170]);
 
 console.log(isBST(tree));
 
 console.log(isBSTSol(tree));
+
+//Can you modify isBSTSol to accomodate non-unique values?
+//Can you optimize isBST to use less memory?
