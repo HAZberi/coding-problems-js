@@ -106,3 +106,11 @@ const depthFirstInAList = [9, 4, 1, 6, 20, 15, 170];
   ```js
   const postorderDFS = [1, 6, 4, 15, 170, 20, 9];
   ```
+
+### Finding the Height of Tree Different Implementations
+
+- With Recursion
+  - Base Case: If there is no node then return 0 as the height of the tree.
+  - Recursive Case: Initiate the height with 1 because the node exist. Find the max height of left and right subtrees and add the result to height. Return height.
+
+- With Breadth First Search

@@ -6,11 +6,14 @@ const findMax = (a, b) => {
 const treeDepthWithRecursion = (node) => {
   if (!node) return 0;
 
-  let height =
+  let height = 1;
+
+  height =
+    height +
     findMax(
       treeDepthWithRecursion(node.left),
       treeDepthWithRecursion(node.right)
-    ) + 1;
+    );
 
   return height;
 };
@@ -31,9 +34,9 @@ const treeDepthWithIteration = (node) => {
     if (currLevelNodes === 0) return level;
     level += 1;
 
-    //Second loop, dequeue one node and add its children to the queue. 
+    //Second loop, dequeue one node and add its children to the queue.
     //Keep the loop running until all the nodes in the current level are traversed.
-    //In each iteration decrement one node. HINT each iteration represents one node traversal. 
+    //In each iteration decrement one node. HINT each iteration represents one node traversal.
     while (currLevelNodes > 0) {
       const currentNode = queue.shift();
 
@@ -45,13 +48,12 @@ const treeDepthWithIteration = (node) => {
   }
 };
 
-const tree = createThreeLevelBinaryTree([9, 4]);
+const tree = createThreeLevelBinaryTree([9, 4, 20, null, null, 15, 170]);
 // tree.left.right.left = 50;
 //console.log(tree);
 
 console.log(treeDepthWithRecursion(tree));
 console.log(treeDepthWithIteration(tree));
-
 
 //Psuedo Code BrainStroming for treedepth with iteration
 //queue
@@ -66,4 +68,3 @@ console.log(treeDepthWithIteration(tree));
 // if left node exist -> add node to the queue
 // if right node exist -> add node to the queue
 // current level nodes - 1; because we popped one node off when we remove the current node from the queue.
-
