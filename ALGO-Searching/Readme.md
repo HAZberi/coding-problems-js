@@ -114,3 +114,12 @@ const depthFirstInAList = [9, 4, 1, 6, 20, 15, 170];
   - Recursive Case: Initiate the height with 1 because the node exist. Find the max height of left and right subtrees and add the result to height. Return height.
 
 - With Breadth First Search
+  - Track the number of nodes in current level. Hint: use length of queue in outer loop. 
+  - Track the height of tree. Initiate height with 0 and increment height if all the nodes in the current level are traversed.
+  - Use an outer loop to keep track of number of nodes in current level and height. If there are no nodes in the current level return the height. 
+  - Use an inner loop to traverse the current node and add its children to the queue. Decrement current node from current level nodes tracker. 
+
+### Validate A Binary Search Tree
+
+- With Inorder Traversal
+- With a (min-max) range of node values 
