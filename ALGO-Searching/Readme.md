@@ -122,4 +122,8 @@ const depthFirstInAList = [9, 4, 1, 6, 20, 15, 170];
 ### Validate A Binary Search Tree
 
 - With Inorder Traversal
+  - Inorder traversal returns a sorted list if the tree is a valid binary tree.
+  - Use helper function to implement inorder traversal to retrieve a list of values.
+  - Check if the returned list is sorted. 
+  - If the list is sorted, then its a valid Binary Search Tree. 
 - With a (min-max) range of node values 
