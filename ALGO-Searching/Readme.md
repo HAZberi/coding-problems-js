@@ -127,3 +127,7 @@ const depthFirstInAList = [9, 4, 1, 6, 20, 15, 170];
   - Check if the returned list is sorted. 
   - If the list is sorted, then its a valid Binary Search Tree. 
 - With a (min-max) range of node values 
+  - Use a series of checks before recursing subtrees.
+  - If there is no node, its a valid BST.
+  - If a minimum value is passed as an argument, check if its greater than the current node value.
+  - If a maximum value is passed as an argument, check if its smaller than 
