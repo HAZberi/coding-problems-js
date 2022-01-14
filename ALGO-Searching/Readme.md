@@ -130,4 +130,7 @@ const depthFirstInAList = [9, 4, 1, 6, 20, 15, 170];
   - Use a series of checks before recursing subtrees.
   - If there is no node, its a valid BST.
   - If a minimum value is passed as an argument, check if its greater than the current node value.
-  - If a maximum value is passed as an argument, check if its smaller than 
+  - If a maximum value is passed as an argument, check if its smaller than the current node value. 
+  - Recursivly check left subtree, by providing the current node value as maximum value.
+  - Recursively check right subtree, by providing the current node value as minimum value.
+  - If all conditions are met then its a valid BST. 

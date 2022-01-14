@@ -33,9 +33,9 @@ const isSorted = (list) => {
 //works for only unique values.
 const isBSTSol = (node, min = null, max = null) => {
   if (node === null) return true;
-  if (min !== null && node.value <= min) return false; //Hint: Checks right subtree
+  if (min !== null && min >= node.value) return false; //Hint: Checks right subtree
 
-  if (max !== null && node.value >= max) return false; //Hint: Checks left subtree
+  if (max !== null && max <= node.value) return false; //Hint: Checks left subtree
 
   if (
     !isBSTSol(node.left, min, node.value) ||
@@ -57,7 +57,7 @@ const isBSTSol = (node, min = null, max = null) => {
 //1     6       8      170
 
 
-const tree = createThreeLevelBinaryTree([9, 4, 20, 1, 6, 15, 170]);
+const tree = createThreeLevelBinaryTree([9, 4, 20, 1, 6, 9, 170]);
 
 console.log(isBST(tree));
 
