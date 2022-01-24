@@ -5,7 +5,10 @@
 let cache = {};
 let calculations = 0;
 const fabonacci = (n) => {
-  if (cache[n]) return cache[n];
+
+  //Uncomment the line below to enable caching.  
+  //if (cache[n]) return cache[n];
+
   calculations++;
   if (n <= 1) {
     cache[n] = n;
@@ -17,20 +20,25 @@ const fabonacci = (n) => {
   return cache[n];
 };
 
-console.log(fabonacci(4));
-console.log(calculations);
+console.log(fabonacci(41));
+console.log(`It took ${calculations} calculations if we are not caching the results.`);
 //console.log(cache);
+
+//reset calculations to track the number of operations for memoized 
+calculations = 0;
 
 const memoizedFabonacci = () => {
   let cache = {};
-  return function (n) {
+  return function calcFabonacci(n) {
     if (n in cache) return cache[n];
+    calculations++;
+
     if (n <= 1) {
       cache[n] = n;
       return cache[n];
     }
 
-    cache[n] = fabonacci(n - 1) + fabonacci(n - 2);
+    cache[n] = calcFabonacci(n - 1) + calcFabonacci(n - 2);
 
     return cache[n];
   };
@@ -38,4 +46,6 @@ const memoizedFabonacci = () => {
 
 const fabonacciNumber = memoizedFabonacci();
 
-console.log(fabonacciNumber(4));
+console.log(fabonacciNumber(41));
+//console.log(cached);
+console.log(`It took ${calculations} calculations if caching is implemented.`);
