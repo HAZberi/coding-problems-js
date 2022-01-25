@@ -5,8 +5,7 @@
 let cache = {};
 let calculations = 0;
 const fabonacci = (n) => {
-
-  //Uncomment the line below to enable caching.  
+  //Uncomment the line below to enable caching.
   //if (cache[n]) return cache[n];
 
   calculations++;
@@ -20,11 +19,13 @@ const fabonacci = (n) => {
   return cache[n];
 };
 
-console.log(fabonacci(31));
-console.log(`It took ${calculations} calculations if we are not caching the results.`);
+console.log(fabonacci(8));
+console.log(
+  `It took ${calculations} calculations if we are not caching the results.`
+);
 //console.log(cache);
 
-//reset calculations to track the number of operations for memoized 
+//reset calculations to track the number of operations for memoized
 calculations = 0;
 
 const memoizedFabonacci = () => {
@@ -46,6 +47,23 @@ const memoizedFabonacci = () => {
 
 const fabonacciNumber = memoizedFabonacci();
 
-console.log(fabonacciNumber(31));
+console.log(fabonacciNumber(8));
 //console.log(cached);
 console.log(`It took ${calculations} calculations if caching is implemented.`);
+
+//Bottom Up Approach
+const fabonacciBottomUp = (n) => {
+  let solution = [0, 1];
+
+  if (n < 0) return "Not valid for negative integers.";
+
+  if (n > 1) {
+    for (let i = 2; i <= n; i++) {
+      solution.push(solution[i - 1] + solution[i - 2]);
+    }
+  }
+
+  return solution.pop();
+};
+
+console.log(fabonacciBottomUp(8));
