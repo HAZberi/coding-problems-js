@@ -20,7 +20,7 @@ const fabonacci = (n) => {
   return cache[n];
 };
 
-console.log(fabonacci(41));
+console.log(fabonacci(31));
 console.log(`It took ${calculations} calculations if we are not caching the results.`);
 //console.log(cache);
 
@@ -30,8 +30,8 @@ calculations = 0;
 const memoizedFabonacci = () => {
   let cache = {};
   return function calcFabonacci(n) {
-    if (n in cache) return cache[n];
     calculations++;
+    if (n in cache) return cache[n];
 
     if (n <= 1) {
       cache[n] = n;
@@ -46,6 +46,6 @@ const memoizedFabonacci = () => {
 
 const fabonacciNumber = memoizedFabonacci();
 
-console.log(fabonacciNumber(41));
+console.log(fabonacciNumber(31));
 //console.log(cached);
 console.log(`It took ${calculations} calculations if caching is implemented.`);
