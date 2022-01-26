@@ -6,7 +6,7 @@
 - Example: A database retrieval can be made faster using Redis caching. 
 - There are two approches to use dynamic programming.
     - Top Down Approach ??? 
-    - Bottom Up Approach ??? 
+    - Bottom Up Approach ??? (Doesn't follow clean code.)
 
 ### Generic Steps that lead to Dynamic Programming
 
