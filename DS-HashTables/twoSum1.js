@@ -12,7 +12,7 @@ const twoSum = (nums, target) => {
   let dictionary = {};
 
   for (let i = 0; i < nums.length; i++) {
-    if (dictionary[nums[i]]) return nums[i], i;
+    if (nums[i] in dictionary) return [dictionary[nums[i]], i];
     //Use Equation target = nums[a] + nums[b] => nums[a] = target - nums[b]
     else dictionary[target - nums[i]] = i;
   }
