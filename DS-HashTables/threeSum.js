@@ -4,7 +4,8 @@
 
 const nums = [-1, 0, 1, 2, -1, -4]; //test case
 
-//----------------------Solution In Progress, Not Solved Yet-----------------------------
+//----------------------Solution In Progress, Partial solved-----------------------------//
+//Problem at hand: Remove Duplicates.
 
 const threeSum = (nums) => {
   const dictionary = {};
@@ -17,13 +18,11 @@ const threeSum = (nums) => {
           i !== j &&
           i !== dictionary[nums[j]] &&
           j !== dictionary[nums[j]] &&
-          nums[i] + nums[j] + dictionary[nums[j]] === 0
+          nums[i] + nums[j] + nums[dictionary[nums[j]]] === 0
         ) {
-          console.log(i, j, dictionary[nums[j]]);
           result.push([nums[i], nums[j], nums[dictionary[nums[j]]]]);
         }
       } else {
-        // console.log([0 - nums[i] - nums[j], j, nums[j]]);
         dictionary[0 - nums[i] - nums[j]] = j;
       }
     }
