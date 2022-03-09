@@ -10,9 +10,22 @@
 
 // Your solution must use only constant extra space.
 
-const nums = [2, 7, 11, 15];
-const target = 9;
+const nums = [2,3,4];
+const target = 6;
 
 const twoSumSorted = (nums, target) => {
-  return [0, 1];
+  let l = 0;
+  let r = nums.length - 1;
+  for (let i = 0; i < nums.length; i++) {
+    if (l > r) return;
+    if (nums[l] + nums[r] > target) {
+      r--;
+    } else if (nums[l] + nums[r] < target) {
+      l++;
+    } else {
+      return [l + 1, r + 1]; //to convert 0-indexed(usual array starting with 0 index) to 1-indexed array of integers
+    }
+  }
 };
+
+console.log(twoSumSorted(nums, target));
