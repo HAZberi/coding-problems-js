@@ -27,3 +27,4 @@
 - Two Sum 2
 - Three Sum
 - Validate a Binary Search Tree
+- Height/Depth of Binary Tree
