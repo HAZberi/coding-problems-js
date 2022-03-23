@@ -23,9 +23,9 @@
     - O(n); Without any ordering property on the nodes, we might have to search through all the nodes.
 
 ### LeetCode Problems
-- Two Sum
+- Two Sum (HashMap)
 - Two Sum 2
-- Three Sum
+- Three Sum Init
 - Validate a Binary Search Tree
 - Height/Depth of Binary Tree
 - House Robber 1
