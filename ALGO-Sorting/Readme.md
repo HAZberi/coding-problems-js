@@ -57,7 +57,7 @@ Bubble sort operates by repeatedly swapping the adjacent elements if they are in
 - BigO = n log n, but the space complexity is O(n) instead of O(1).
 - [Merge Sort Explaination](https://www.youtube.com/watch?v=1sdEchFsL0Y&ab_channel=AaronJack)
 
-### Quick Sort
+### Quick Sort*
 
 - Quick sort can be implemented in a variety of ways but the main idea is to select the pivot and find its correct location in the sorted array. 
 - Quick sort implementation algo as follows:
