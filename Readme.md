@@ -25,7 +25,7 @@
 ### LeetCode Problems
 - Two Sum (HashMap)
 - Two Sum 2
-- Three Sum (Not Completed)
+- Three Sum
 - Validate a Binary Search Tree
 - Height/Depth of Binary Tree
 - House Robber 1
