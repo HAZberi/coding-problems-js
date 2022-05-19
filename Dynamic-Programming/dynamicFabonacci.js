@@ -67,3 +67,18 @@ const fabonacciBottomUp = (n) => {
 };
 
 console.log(fabonacciBottomUp(8));
+
+const anotherFabonacci = (n) => {
+  let val1 = 0;
+  let val2 = 1;
+
+  for (let i = 0; i < n; i++) {
+    const temp = val1;
+    val1 = val1 + val2;
+    val2 = temp;
+  }
+
+  return val1;
+};
+
+console.log(anotherFabonacci(8));
