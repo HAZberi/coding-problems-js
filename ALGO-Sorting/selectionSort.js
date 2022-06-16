@@ -12,9 +12,12 @@ const selectionSort = (array) => {
       }
     }
 
-    const temp = array[i];
-    array[i] = array[lowestValueIndex];
-    array[lowestValueIndex] = temp;
+    if (lowestValueIndex !== i){
+      console.log(array[i], array[lowestValueIndex])
+      const temp = array[i];
+      array[i] = array[lowestValueIndex];
+      array[lowestValueIndex] = temp;
+    }
   }
 
   return array;
