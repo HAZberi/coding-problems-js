@@ -22,4 +22,4 @@ const binarySearch = (arr = [], num, low = 0, high = 0) => {
   return mid;
 };
 
-console.log(binarySearch(arr, 2, 0, arr.length));
+console.log(binarySearch(arr, 197, 0, arr.length));
