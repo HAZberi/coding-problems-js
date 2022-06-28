@@ -29,8 +29,8 @@ const insertionSortVariation = (arr) => {
     temp = arr[i];
     for(let j = i - 1; j >= 0; j--){
       if(arr[j] > temp){
-        arr[i + 1] = arr[j];
-        arr[i] = temp;
+        arr[j + 1] = arr[j];
+        arr[j] = temp;
       }
     }
   }
